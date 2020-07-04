@@ -1,0 +1,619 @@
+$font: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+html,
+body {
+  font-family: $font;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1640px;
+  min-width: 1640px;
+  margin: 0 auto;
+  @media (max-width: 1440px) {
+    width: 1280px;
+    min-width: 1280px;
+  }
+  @media (max-width: 1280px) {
+    width: 976px;
+    min-width: 976px;
+  }
+  @media (max-width: 976px) {
+    width: 768px;
+    min-width: 768px;
+  }
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  background-color: #5700a8;
+  .inner-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    .logo {
+      a {
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+    .navigation {
+      nav {
+        a {
+          margin: 0 5px;
+          text-decoration: none;
+          letter-spacing: 1.5px;
+          font-size: 0.7rem;
+          color: white;
+          text-transform: uppercase;
+          &:last-child {
+            margin-right: 0px;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  background-color: #7100db;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  .row {
+    display: inline;
+    .main-text {
+      padding: 10px;
+      display: block;
+      font-size: 8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: white;
+      @media (max-width: 1440) {
+        font-size: 4.4rem;
+      }
+    }
+    .desc {
+      color: white;
+      font-size: 3em;
+      margin-top: -40px;
+    }
+    .bannerlinks {
+      .github {
+        display: inline-block;
+        width: 50px;
+        :hover {
+          opacity: 80%;
+        }
+      }
+      .linkedin {
+        display: inline-block;
+        width: 50px;
+        margin-left: 20px;
+        :hover {
+          opacity: 80%;
+        }
+      }
+      margin-top: -20px;
+    }
+  }
+}
+
+.aboutpg {
+  height: 90vh;
+  .title {
+    padding-top: 15vh;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #5700a8;
+  }
+  .englishdesc {
+    padding-top: 5px;
+    font-weight: 350;
+  }
+  .engfeatures {
+    .featurestitle {
+      padding-top: 30px;
+      color: #5700a8;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    .helpline {
+      display: inline-block;
+      background-color: #5700a8;
+      width: 300px;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 10px 10px #7100db;
+      height: 20vh;
+      .helplineimg {
+        margin-top: 10px;
+        width: 30px;
+      }
+      .helplinetitle {
+        font-size: 1.5rem;
+        font-weight: 450;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        margin-top: 10px;
+        letter-spacing: 0.5px;
+      }
+      .helplinedesc {
+        color: white;
+      }
+    }
+    .contact {
+      margin-left: 35px;
+      background-color: #5700a8;
+      display: inline-block;
+      width: 300px;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 10px 10px #7100db;
+      height: 20vh;
+      .contactimg {
+        margin-top: 10px;
+        width: 30px;
+      }
+      .contacttitle {
+        font-size: 1.5rem;
+        font-weight: 450;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        margin-top: 10px;
+        letter-spacing: 0.5px;
+      }
+      .contactdesc {
+        color: white;
+      }
+    }
+    .info {
+      margin-left: 35px;
+      background-color: #5700a8;
+      display: inline-block;
+      width: 300px;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 10px 10px #7100db;
+      height: 20vh;
+      .infoimg {
+        margin-top: 10px;
+        width: 30px;
+      }
+      .infotitle {
+        font-size: 1.5rem;
+        font-weight: 450;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        margin-top: 10px;
+        letter-spacing: 0.5px;
+      }
+      .infodesc {
+        color: white;
+      }
+    }
+  }
+  .urdufirst {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: #5700a8;
+    font-size: 1.5rem;
+  }
+  .teambtn {
+    .contributebtn {
+      text-decoration: none;
+      background-color: #5700a8;
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+      border-radius: 20px;
+      box-shadow: 10px 10px #7100db;
+      display: inline-block;
+    }
+    .updatedbtn {
+      text-decoration: none;
+      background-color: #5700a8;
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+      border-radius: 20px;
+      box-shadow: 10px 10px #7100db;
+      display: inline-block;
+      margin-left: 35px;
+    }
+
+    .opensrcbtn {
+      text-decoration: none;
+      background-color: #5700a8;
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+      border-radius: 20px;
+      box-shadow: 10px 10px #7100db;
+      display: inline-block;
+      margin-left: 35px;
+    }
+  }
+}
+.contributepg {
+  height: 90vh;
+  .title {
+    padding-top: 20vh;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #5700a8;
+  }
+  .englishdesc {
+    padding-top: 5px;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  .urdufirst {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #5700a8;
+    font-size: 2.7rem;
+  }
+  .urdusecond {
+    margin-top: -20px;
+    color: #5700a8;
+    font-size: 3rem;
+  }
+  .opensrcbtn {
+    background-color: #5700a8;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    box-shadow: 10px 10px #7100db;
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+.downloadpg {
+  height: 90vh;
+  background-color: #7100db;
+  .comingsoongrp {
+    text-align: center;
+    .comingsoon {
+      font-size: 2.5rem;
+      color: white;
+      padding-top: 35vh;
+    }
+    .checkback {
+      font-size: 2rem;
+    }
+  }
+}
+
+// media query for mobile
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90vh;
+  }
+  header {
+    height: 20vh;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    background-color: #5700a8;
+    .inner-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 20vh;
+      .logo {
+        a {
+          font-weight: 700;
+          letter-spacing: 1.5px;
+          color: white;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 0rem;
+        }
+      }
+      .navigation {
+        nav {
+          a {
+            padding-right: 8vh;
+            padding-left: 5vh;
+            margin: 10px;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            font-size: 1.5rem;
+            color: white;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+  .banner {
+    background-color: #7100db;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 1500px;
+    width: 770px;
+    .row {
+      display: inline;
+      .main-text {
+        padding: 30px;
+        display: block;
+        font-size: 9rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: white;
+        @media (max-width: 1440) {
+          font-size: 4.4rem;
+        }
+      }
+      .desc {
+        color: white;
+        font-size: 3.4rem;
+        margin-top: -40px;
+        padding-left: 30px;
+      }
+      .bannerlinks {
+        .github {
+          display: inline-block;
+          width: 80px;
+          :hover {
+            opacity: 80%;
+          }
+        }
+        .linkedin {
+          display: inline-block;
+          width: 80px;
+          margin-left: 20px;
+          :hover {
+            opacity: 80%;
+          }
+        }
+        margin-top: -20px;
+      }
+    }
+  }
+  .aboutpg {
+    .title {
+      padding-top: 20vh;
+      padding-left: 30px;
+      font-size: 5rem;
+      font-weight: 700;
+      color: #5700a8;
+    }
+    .englishdesc {
+      padding-left: 30px;
+      font-weight: 450;
+      padding-top: 0px;
+      font-size: 1.5rem;
+    }
+    .engfeatures {
+      .featurestitle {
+        padding-top: 30px;
+        padding-left: 30px;
+        color: #5700a8;
+        font-weight: 600;
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+      .helpline {
+        background-color: #5700a8;
+        width: 600px;
+        margin-left: 30px;
+        border-radius: 20px;
+        box-shadow: 10px 10px #7100db;
+        padding: 20px;
+        .helplineimg {
+          width: 0px;
+        }
+        .helplinetitle {
+          font-size: 2rem;
+          font-weight: 450;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          color: white;
+          margin-top: 10px;
+          letter-spacing: 0.5px;
+        }
+        .helplinedesc {
+          color: white;
+          font-size: 1.5rem;
+        }
+      }
+      .contact {
+        background-color: #5700a8;
+        width: 600px;
+        margin-left: 30px;
+        border-radius: 20px;
+        box-shadow: 10px 10px #7100db;
+        padding: 20px;
+        margin-top: 40px;
+        .contactimg {
+          width: 0px;
+        }
+        .contacttitle {
+          font-size: 2rem;
+          font-weight: 450;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          color: white;
+          margin-top: 10px;
+          letter-spacing: 0.5px;
+        }
+        .contactdesc {
+          color: white;
+          font-size: 1.5rem;
+        }
+      }
+      .info {
+        background-color: #5700a8;
+        width: 600px;
+        margin-left: 30px;
+        border-radius: 20px;
+        box-shadow: 10px 10px #7100db;
+        padding: 20px;
+        margin-top: 40px;
+        .infoimg {
+          width: 0px;
+        }
+        .infotitle {
+          font-size: 2rem;
+          font-weight: 450;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          color: white;
+          margin-top: 10px;
+          letter-spacing: 0.5px;
+        }
+        .infodesc {
+          color: white;
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .urdufirst {
+      padding-top: 40px;
+      padding-bottom: 20px;
+      color: #7100db;
+      font-size: 2rem;
+      padding-left: 35px;
+    }
+    .teambtn {
+      padding-bottom: 50px;
+      .contributebtn {
+        background-color: #5700a8;
+        width: 600px;
+        margin-left: 35px;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        font-size: 2rem;
+        border-radius: 20px;
+        box-shadow: 10px 10px #7100db;
+      }
+      .updatedbtn {
+        background-color: #5700a8;
+        width: 600px;
+        margin-left: 35px;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        font-size: 2rem;
+        border-radius: 20px;
+        box-shadow: 10px 10px #7100db;
+        margin-top: 25px;
+      }
+
+      .opensrcbtn {
+        background-color: #5700a8;
+        width: 600px;
+        margin-left: 35px;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        font-size: 2rem;
+        border-radius: 20px;
+        box-shadow: 10px 10px #7100db;
+        margin-top: 25px;
+      }
+    }
+  }
+  .contributepg {
+    height: 800px;
+    .title {
+      margin-top: 1000px;
+      font-size: 5rem;
+      font-weight: 700;
+      color: #5700a8;
+      padding-left: 35px;
+    }
+    .englishdesc {
+      padding-top: 5px;
+      font-weight: 400;
+      font-size: 2rem;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    .urdufirst {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 35px;
+      color: #5700a8;
+      font-size: 2.7rem;
+    }
+    .urdusecond {
+      padding-top: 10px;
+      margin-top: -20px;
+      padding-left: 35px;
+      color: #5700a8;
+      font-size: 2.4rem;
+    }
+    .opensrcbtn {
+      background-color: #5700a8;
+      width: 600px;
+      text-align: center;
+      padding: 20px;
+      color: white;
+      font-weight: 600;
+      font-size: 2rem;
+      border-radius: 20px;
+      box-shadow: 10px 10px #7100db;
+      display: inline-block;
+      margin-top: 20px;
+      margin-left: 35px;
+    }
+  }
+  .downloadpg {
+    height: 1300px;
+    width: 770px;
+    background-color: #7100db;
+    .comingsoongrp {
+      .comingsoon {
+        text-align: left;
+        font-size: 5rem;
+        color: white;
+        padding-top: 60vh;
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+      .checkback {
+        padding-top: 20px;
+        font-size: 3rem;
+      }
+    }
+  }
+}

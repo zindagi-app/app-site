@@ -1,22 +1,27 @@
 import React from "react"
 import { Link } from "gatsby"
-
-import Layout from "../components/layout"
+import Header from "../components/header"
+import "../styles/styles.scss"
 import Image from "../components/image"
-import SEO from "../components/seo"
+import Banner from "../components/banner"
+import About from "../components/about"
+import Contribute from "../components/contribute"
+import Download from "../components/download"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
+
+const IndexPage = () => {
+  return (
+    <div>
+      <Header />
+      <Banner />
+      <About />
+      <Contribute />
+      <Download />
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
-
+  )
+}
 export default IndexPage
